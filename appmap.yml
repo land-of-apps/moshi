@@ -1,0 +1,4 @@
+name: moshi
+packages:
+ - path: com.squareup.moshi
+
