@@ -203,6 +203,15 @@
           <autoVersionSubmodules>true</autoVersionSubmodules>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <argLine>-javaagent:${maven.multiModuleProjectDirectory}/appmap.jar -Dappmap.debug
+            -Dappmap.config.file=${maven.multiModuleProjectDirectory}/appmap.yml
+            -Dappmap.output.directory=${maven.multiModuleProjectDirectory}/tmp/appmap</argLine>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 </project>
